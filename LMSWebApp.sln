@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36310.24 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LMSWebApp", "LMSWebApp\LMSWebApp.csproj", "{F68DD12A-36C7-454F-ABF8-E4148DCD8C15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{041F2C43-2DB2-4F56-B3E8-AA74B8816213}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F68DD12A-36C7-454F-ABF8-E4148DCD8C15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F68DD12A-36C7-454F-ABF8-E4148DCD8C15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F68DD12A-36C7-454F-ABF8-E4148DCD8C15}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F68DD12A-36C7-454F-ABF8-E4148DCD8C15}.Release|Any CPU.Build.0 = Release|Any CPU
+		{041F2C43-2DB2-4F56-B3E8-AA74B8816213}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{041F2C43-2DB2-4F56-B3E8-AA74B8816213}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{041F2C43-2DB2-4F56-B3E8-AA74B8816213}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{041F2C43-2DB2-4F56-B3E8-AA74B8816213}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {74AC9162-075B-4D60-9341-2121F7362BF7}
+	EndGlobalSection
+EndGlobal

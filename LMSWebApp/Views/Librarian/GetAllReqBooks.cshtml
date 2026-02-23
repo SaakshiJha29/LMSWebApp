@@ -1,0 +1,60 @@
+﻿@model IEnumerable<DataAccessLayer.Models.BookRequest>
+
+@{
+    ViewData["Title"] = "GetAllReqBooks";
+    Layout = "~/Views/Shared/_LibrarianLayout.cshtml";
+}
+
+<h4> All Requested Books</h4>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Assigned Students
+            </th>
+            <th>
+                Assigned Book
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FromDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ToDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RequestStatus)
+            </th>
+           
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignedStudents.FullName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AssignedBook.Title)
+                </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FromDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ToDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RequestStatus)
+            </td>
+           
+            <td>
+                    <a asp-action="AssignRejBook" asp-route-id="@item.Id">Assign / Reject Book</a> |
+            
+                @* <a asp-action="Delete" asp-route-id="@item.Id">Reject Book</a> *@
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

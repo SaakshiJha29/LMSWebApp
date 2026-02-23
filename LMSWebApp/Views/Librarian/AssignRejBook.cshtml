@@ -1,0 +1,63 @@
+﻿@model DataAccessLayer.Models.BookRequest
+
+@{
+    ViewData["Title"] = "AssignRejBook";
+    Layout = "~/Views/Shared/_LibrarianLayout.cshtml";
+}
+
+<h4>Assign Reject Book</h4>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="AssignRejBook">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+              <input type="hidden" asp-for="BookId" />
+            <input type="hidden" asp-for="StudentID" />
+            <div class="form-group">
+                <label asp-for="FromDate" class="control-label"></label>
+                <input asp-for="FromDate" class="form-control"  />
+                <span asp-validation-for="FromDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ToDate" class="control-label"></label>
+                <input asp-for="ToDate" class="form-control"  />
+                <span asp-validation-for="ToDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RequestStatus" class="control-label"></label>
+                <select asp-for="RequestStatus" class="form-control">
+                    <option value="Approved">Approved</option>
+                    <option value="Rejected">Reject</option>
+                    <option value="Returned">Return</option>
+                </select>
+
+                <span asp-validation-for="RequestStatus" class="text-danger"></span>
+            </div>
+            @* <div class="form-group">
+                <label asp-for="StudentID" class="control-label"></label>
+                <select asp-for="StudentID" class="form-control" asp-items="ViewBag.StudentID" disabled></select>
+                <span asp-validation-for="StudentID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BookId" class="control-label"></label>
+                <select asp-for="BookId" class="form-control" asp-items="ViewBag.BookId" disabled></select>
+                <span asp-validation-for="BookId" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="GetAllReqBooks">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}
